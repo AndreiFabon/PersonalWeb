@@ -1,6 +1,11 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Home
 ---
+
+# Welcome to TD’s Site
+
+You're looking at the digital grindset of a Signals Operator in the making.  
+Cyber. Comms. Code. Commitment.
+
+🧱 Every write-up, every project, every win — one brick at a time.

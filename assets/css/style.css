@@ -1,0 +1,68 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  color: #a259ff;
+}
+
+/* === Animated Background === */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Header and Nav === */
+header {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #a259ff44;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #a259ff;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #a259ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* === Main Content === */
+main {
+  background-color: #000;
+  margin: 40px auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #a259ff44;
+}
+
+/* === Footer === */
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 2px solid #a259ff44;
+  font-size: 0.9rem;
+}
