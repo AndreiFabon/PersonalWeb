@@ -94,13 +94,14 @@ main img {
 }
 
 .blog-card {
-  background-color: #111;
+  background-color: #111010;
   padding: 20px;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(162, 89, 255, 0.15);
+  box-shadow: 0 0 100px rgba(162, 89, 255, 0.15);
   transition: transform 0.3s ease;
   max-width: 700px;
+  text-align: left;
 }
 
 .blog-card:hover {
@@ -110,9 +111,9 @@ main img {
 .blog-card a {
   color: #a259ff;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2.0rem;
 }
 
 .blog-card a:hover {
-  color: #fff;
+  color: #e3e1e4;
 }
