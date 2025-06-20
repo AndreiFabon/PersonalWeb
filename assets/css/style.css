@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(-45deg, hwb(283 2% 27%), hsl(245, 82%, 70%), #e960dd);
+  background: linear-gradient(-45deg, hwb(282 33% 35%), hsl(32, 97%, 65%), #eed7ec);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
   color: #a259ff;
@@ -207,4 +207,29 @@ hr {
 
 a {
   color: #FF69B4;
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.7;
+  animation: blob 8s infinite ease-in-out;
+  z-index: 0;
+}
+
+.blob-reverse {
+  animation: blob 10s infinite ease-in-out reverse;
 }
