@@ -30,7 +30,7 @@ built multiple web exploitation challenges for CTF particpants at HTCOB 2025. De
 
 ---
 
-### 👾 Top 13% picoCTF-2025
-March, 2025
+### 👾 8th Place at NCC CTF 
+June, 2025
 
-1323 out of 104060 teams! 
+Team Captain and placed 8th in a national CTF and competed with the best canadian universities out there. (National Cybersecurity Consortium)
