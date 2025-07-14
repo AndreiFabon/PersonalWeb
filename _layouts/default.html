@@ -6,23 +6,38 @@
   <title>{{ page.title }} | TD</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/Untitled design.png' | relative_url }}">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    .page-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 3rem; /* prevent blobs from hiding bottom content */
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
   <div class="page-wrapper">
     
-    <!-- ✨ Mountain Background -->
-    <div class="mountain-background">
-      <!-- Stars -->
-      <div class="stars" id="starsContainer"></div>
-      
-      <!-- Clouds -->
-      <div class="clouds" id="cloudsContainer"></div>
-      
-      <!-- Mountain layers -->
-      <div class="mountain-layer mountain-back parallax-element" data-speed="0.2"></div>
-      <div class="mountain-layer mountain-mid parallax-element" data-speed="0.5"></div>
-      <div class="mountain-layer mountain-front parallax-element" data-speed="0.8"></div>
-    </div>
+    <!-- ✨ Animated Blob Background -->
+    <div class="blob" style="top:10%; left:10%; width:60%; height:60%; background: linear-gradient(to bottom right, #f0c, rgb(193, 143, 226));"></div>
+    <div class="blob blob-reverse" style="top:30%; left:40%; width:50%; height:50%; background: linear-gradient(to bottom right, rgb(33, 51, 212), rgb(230, 236, 236));"></div>
 
     <!-- 🔒 Content Layer -->
     <div class="content-wrapper">
@@ -60,66 +75,5 @@
     </footer>
 
   </div>
-
-  <!-- JavaScript for Mountain Background -->
-  <script>
-    // Generate random stars
-    function createStars() {
-      const starsContainer = document.getElementById('starsContainer');
-      const numberOfStars = 100;
-
-      for (let i = 0; i < numberOfStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = Math.random() * 100 + '%';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.width = Math.random() * 3 + 1 + 'px';
-        star.style.height = star.style.width;
-        star.style.animationDelay = Math.random() * 3 + 's';
-        star.style.animationDuration = (Math.random() * 2 + 2) + 's';
-        starsContainer.appendChild(star);
-      }
-    }
-
-    // Generate random clouds
-    function createClouds() {
-      const cloudsContainer = document.getElementById('cloudsContainer');
-      const numberOfClouds = 5;
-
-      for (let i = 0; i < numberOfClouds; i++) {
-        const cloud = document.createElement('div');
-        cloud.className = 'cloud';
-        cloud.style.width = Math.random() * 80 + 60 + 'px';
-        cloud.style.height = Math.random() * 40 + 30 + 'px';
-        cloud.style.left = Math.random() * 100 + '%';
-        cloud.style.top = Math.random() * 60 + 20 + '%';
-        cloud.style.animationDelay = Math.random() * 20 + 's';
-        cloud.style.animationDuration = (Math.random() * 10 + 15) + 's';
-        cloudsContainer.appendChild(cloud);
-      }
-    }
-
-    // Parallax scrolling effect
-    function parallaxScroll() {
-      const scrollTop = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.parallax-element');
-
-      parallaxElements.forEach(element => {
-        const speed = element.dataset.speed;
-        const yPos = -(scrollTop * speed);
-        element.style.transform = `translateY(${yPos}px)`;
-      });
-    }
-
-    // Initialize when page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      createStars();
-      createClouds();
-    });
-
-    // Add scroll event listener
-    window.addEventListener('scroll', parallaxScroll);
-  </script>
-
 </body>
 </html>
