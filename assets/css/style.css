@@ -255,28 +255,6 @@ html, body {
   flex: 1;
 }
 
-/* === Mobile Responsive Looks better=== */
-@media (max-width: 600px) {
-  main {
-    width: 95%;
-    padding: 20px;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  nav a {
-    margin: 5px;
-    font-size: 0.95rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding-bottom: 30px;
-  }
-}
-
 /* === Navigation Social === */
 .nav-social {
   margin-left: 20px;
@@ -356,4 +334,121 @@ hr {
   border-top: 2px solid #a259ff;
   margin: 15px 0;
   opacity: 0.6;
+}
+
+/* === IMPROVED MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  /* Header improvements */
+  header {
+    padding: 15px 10px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation stack and spacing */
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .nav-separator {
+    display: none; /* Hide separator on mobile */
+  }
+  
+  .nav-social {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  /* Main content - much better spacing */
+  main {
+    width: 90%;
+    padding: 25px 20px;
+    margin: 20px auto;
+  }
+  
+  /* Typography improvements */
+  main p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  main h1 {
+    font-size: 1.8rem;
+    margin: 25px 0 15px 0;
+  }
+  
+  main h2 {
+    font-size: 1.5rem;
+    margin: 20px 0 12px 0;
+  }
+  
+  main h3 {
+    font-size: 1.3rem;
+    margin: 18px 0 10px 0;
+  }
+  
+  /* Blog cards mobile */
+  .blog-card {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .blog-card a {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  /* Image sizing */
+  main img {
+    width: 100%;
+    max-width: 280px;
+    margin: 15px auto;
+  }
+  
+  /* Footer spacing */
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 10px 25px 10px;
+  }
+}
+
+/* === EXTRA SMALL SCREENS === */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  
+  main {
+    width: 92%;
+    padding: 20px 15px;
+  }
+  
+  nav a {
+    margin: 0 8px;
+    font-size: 0.95rem;
+  }
+  
+  .nav-social img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  main h1 {
+    font-size: 1.6rem;
+  }
+  
+  .blog-card a {
+    font-size: 1.3rem;
+  }
 }
