@@ -6,38 +6,26 @@
   <title>{{ page.title }} | TD</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/Untitled design.png' | relative_url }}">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-    }
-
-    .page-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .content-wrapper {
-      position: relative;
-      z-index: 1;
-      padding-bottom: 3rem; /* prevent blobs from hiding bottom content */
-    }
-
-    footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
 </head>
 <body>
   <div class="page-wrapper">
     
-    <!-- ✨ Animated Blob Background -->
-    <div class="blob" style="top:10%; left:10%; width:60%; height:60%; background: linear-gradient(to bottom right, #f0c, rgb(193, 143, 226));"></div>
-    <div class="blob blob-reverse" style="top:30%; left:40%; width:50%; height:50%; background: linear-gradient(to bottom right, rgb(33, 51, 212), rgb(230, 236, 236));"></div>
+    <!-- ✨ Mountain Background -->
+    <div class="mountain-background">
+      <!-- Stars -->
+      <div class="stars" id="starsContainer"></div>
+      
+      <!-- Clouds -->
+      <div class="clouds" id="cloudsContainer"></div>
+      
+      <!-- Shooting star -->
+      <div class="shooting-star" id="shootingStar"></div>
+      
+      <!-- Mountain layers -->
+      <div class="mountain-layer mountain-back"></div>
+      <div class="mountain-layer mountain-mid"></div>
+      <div class="mountain-layer mountain-front"></div>
+    </div>
 
     <!-- 🔒 Content Layer -->
     <div class="content-wrapper">
@@ -75,5 +63,75 @@
     </footer>
 
   </div>
+
+  <!-- JavaScript for Mountain Background -->
+  <script>
+    // Generate random stars
+    function createStars() {
+      const starsContainer = document.getElementById('starsContainer');
+      const numberOfStars = 100;
+
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = Math.random() * 3 + 1 + 'px';
+        star.style.height = star.style.width;
+        star.style.animationDelay = Math.random() * 3 + 's';
+        star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        star.style.zIndex = '2';
+        starsContainer.appendChild(star);
+      }
+    }
+
+    // Generate random clouds
+    function createClouds() {
+      const cloudsContainer = document.getElementById('cloudsContainer');
+      const numberOfClouds = 12;
+
+      for (let i = 0; i < numberOfClouds; i++) {
+        const cloud = document.createElement('div');
+        cloud.className = 'cloud';
+        
+        // Randomly assign reverse direction to about half the clouds
+        if (Math.random() < 0.4) {
+          cloud.classList.add('reverse');
+        }
+        
+        cloud.style.width = Math.random() * 80 + 60 + 'px';
+        cloud.style.height = Math.random() * 40 + 30 + 'px';
+        cloud.style.left = Math.random() * 100 + '%';
+        cloud.style.top = Math.random() * 60 + 20 + '%';
+        cloud.style.animationDelay = Math.random() * 20 + 's';
+        cloud.style.animationDuration = (Math.random() * 10 + 15) + 's';
+        cloudsContainer.appendChild(cloud);
+      }
+    }
+
+    // Create shooting star effect
+    function createShootingStar() {
+      const shootingStar = document.getElementById('shootingStar');
+      
+      // Random starting position
+      shootingStar.style.left = Math.random() * 50 + '%';
+      shootingStar.style.top = Math.random() * 30 + 10 + '%';
+      
+      // Random delay between shooting stars
+      const randomDelay = Math.random() * 8000 + 5000; // 5-13 seconds
+      
+      setTimeout(() => {
+        createShootingStar(); // Create next shooting star
+      }, randomDelay);
+    }
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      createClouds();
+      createShootingStar();
+      console.log('Mountain background initialized successfully!');
+    });
+  </script>
 </body>
 </html>
