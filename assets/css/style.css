@@ -348,21 +348,13 @@ hr {
     margin-bottom: 10px;
   }
   
-  /* Navigation stack and spacing */
+  /* Navigation horizontal with better spacing */
   nav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     margin-top: 15px;
   }
   
-  .nav-separator {
-    display: none; /* Hide separator on mobile */
-  }
-  
   .nav-social {
-    margin-left: 0;
-    margin-top: 5px;
+    margin-left: 10px; /* Reduce spacing but keep horizontal */
   }
   
   nav a {
