@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-13T20:40:31-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">NCC CTF 2025 (8th)</title><link href="http://localhost:4000/2025/06/27/NCC-CTF-2025.html" rel="alternate" type="text/html" title="NCC CTF 2025 (8th)" /><published>2025-06-27T00:00:00-06:00</published><updated>2025-06-27T00:00:00-06:00</updated><id>http://localhost:4000/2025/06/27/NCC-CTF-2025</id><content type="html" xml:base="http://localhost:4000/2025/06/27/NCC-CTF-2025.html"><![CDATA[<p>WE PLACED 8th IN THE COUNTRY! RAHHHH</p>
+
+<p>Here are my 3 key takeways from this conference + CTF!</p>
+
+<ol>
+  <li>
+    <p>While placing 8th nationally is something I’m incredibly proud of, this CTF reminded me that the real win is pushing beyond your previous limits. The challenges exposed knowledge gaps, demanded quick thinking, and forced me to adapt in real time. I walked away knowing there’s still so much more to learn and that in CTFs, it’s not about being perfect. It’s about practicing consistently and chasing progress. That is what it takes to become one of the best.</p>
+  </li>
+  <li>
+    <p>At the end of the day, cybersecurity isn’t just about tools or exploits, it’s about people. This conference introduced me to individuals who were not only technically brilliant, but also incredibly welcoming. Over just two days, I met people who mentored, shared knowledge, and offered real inspiration. Whether it was hearing their journeys or receiving tips for mine, one thing was clear: this community genuinely wants to help.
+It’s humans taking care of other humans. This makes the community so special.</p>
+  </li>
+  <li>
+    <p>Opportunities like this are rare and priceless. When one comes your way, you can’t go halfway. You go all in. As students, every dollar matters. That’s why a few of us decided to camp out in Banff, sleeping in tents or even in the car just to make it work. Because to grow and become your best self. Whether in tech or in life, you have to get uncomfortable. The person you want to become? They’re waiting just on the other side of discomfort.</p>
+  </li>
+</ol>
+
+<hr />
+
+<p>forensics 100 (Edge case)</p>
+
+<p>You just had to look at the code. When I was inspecting the code on my WSL using vim, there seemed to be a lot of empty space between the code and something else.</p>
+
+<p>So when you cat the script, you’re able to see a bunch of random ASCII-like patterns. At the end of the pattern, there was an encoded string in base64.</p>
+
+<p>the command I had used was.</p>
+
+<p>bash:
+<code class="language-plaintext highlighter-rouge">cat -A {filename}</code></p>
+
+<p>with this I went to a <a href="https://www.base64decode.org/">website</a> that decodes base64 and I got the flag.</p>
+
+<p><code class="language-plaintext highlighter-rouge">flag = nccctf{oFF_7h3_GriD_WE_fR3ak!n9_gO}</code></p>
+
+<hr />
+
+<p>Misc 100 (VCS)</p>
+
+<p>For this challenge, we had to download a .tar.gz file. At first, I wasn’t sure what “VCS” meant in a software development context—but after a quick check, I realized it stood for Version Control System.</p>
+
+<p>From there, I started looking into how to search through Git logs. I dug through various code snippets and commit messages, but all the pushes and changes yielded nothing. I even checked for deleted files, but still came up empty.</p>
+
+<p>Eventually, I installed qpdf and started grepping through the Git files, looking specifically for anything that started with nccctf. That led me to the hidden flag.</p>
+
+<p><code class="language-plaintext highlighter-rouge">flag = nccctf{n0_c0mm1t_n0_tr4c3}</code></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Write Up's and Takeaways]]></summary></entry><entry><title type="html">inital commit</title><link href="http://localhost:4000/2025/06/19/my-first-post.html" rel="alternate" type="text/html" title="inital commit" /><published>2025-06-19T00:00:00-06:00</published><updated>2025-06-19T00:00:00-06:00</updated><id>http://localhost:4000/2025/06/19/my-first-post</id><content type="html" xml:base="http://localhost:4000/2025/06/19/my-first-post.html"><![CDATA[<p>This is my first blog post on the site.<br />
+I’ll be using this space for writeups, tech notes, and whatever else I want to document.</p>
+
+<p>This is me just playing around with Jekyll :)</p>
+
+<p>Well WELCOME to my website! thank you for checking out and I hope you think it’s neat!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[My first ever blog post :)]]></summary></entry></feed>
