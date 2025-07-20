@@ -10,7 +10,7 @@ A space to show off the Wins and Projects that I am proud of :)
 ### 🥉 UofSask CTF – 3rd Place
 May, 2025
 
-Created and solved challenges in many domains! Such as but not limited to Crpyto, Forensics, etc.
+Solved challenges in many domains! Such as but not limited to Crpyto, Forensics, etc.
 
 ---
 
