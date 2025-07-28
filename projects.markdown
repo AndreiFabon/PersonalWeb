@@ -30,7 +30,14 @@ built multiple web exploitation challenges for CTF particpants at HTCOB 2025. De
 
 ---
 
-### 👾 8th Place at NCC CTF 
+### 👾 NCC CTF - 8th Place
 June, 2025
 
 Team Captain and placed 8th in a national CTF and competed with the best canadian universities out there. (National Cybersecurity Consortium)
+
+---
+
+### 🏆 SAIT CTF (Alice in Pwnderland) - 4th Place
+July, 2025
+
+Placed 4th at SAIT's Alice in PWNderland CTF. Personally solved 4 challenges across multiple cybersecurity domains including physical security, network forensics , IoT security , and logic puzzles with RFID cards. Team drove 3 hours to Calgary for the competition, demonstrating dedication and enthusiasm to hands-on cybersecurity learning. 
