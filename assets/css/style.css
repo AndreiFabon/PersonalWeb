@@ -288,8 +288,8 @@ html, body {
 main img {
   display: block;
   margin: 20px auto;
-  width: 300px;
-  max-width: 100%;
+  width: 80%; max-width: 600px;
+  width: 90%; max-width: 350px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(162, 89, 255, 0.2);
