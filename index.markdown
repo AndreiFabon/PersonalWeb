@@ -9,5 +9,5 @@ Hey, my name is Andrei, or you can just call me TD. I’m a cybersecurity enthus
 
 Psst... Add me on Linkedin (;
 
-![Alt text](assets/images/GOPR3184.JPG)
+![Alt text](assets/images/pfp.jpg)
 Escape The Ordinary.
